@@ -4,249 +4,286 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Commands</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- navbar -->
-    <nav id="navbar">
-        <header>GIT Commands</header>
-        <ul>
-            <li>
-                <a href="#Basic_Configuration" class="nav-link">Basic Configuration</a>
-            </li>
-            <li>
-                <a href="#Starting_repository" class="nav-link">Starting repository</a>
-            </li>
-            <li>
-                <a href="#GIT_CLONE" class="nav-link">GIT CLONE</a>
-            </li>
-            <li>
-                <a href="#GIT_ADD" class="nav-link">GIT ADD</a>
-            </li>
-            <li>
-                <a href="#GIT_COMMIT" class="nav-link">GIT COMMIT</a>
-            </li>
-            <li>
-                <a href="#GIT_PUSH" class="nav-link">GIT PUSH</a>
-            </li>
-            <li>
-                <a href="#GIT_LOG" class="nav-link">GIT LOG</a>
-            </li>
-            <li>
-                <a href="#GIT_DIFF" class="nav-link">GIT DIFF</a>
-            </li>
-            <li>
-                <a href="#GIT_HEAD" class="nav-link">GIT HEAD</a>
-            </li>
-            <li>
-                <a href="#GIT_REMOTE" class="nav-link">GIT REMOTE</a>
-            </li>
-            <li>
-                <a href="#GIT_BRANCH" class="nav-link">GIT BRANCH</a>
-            </li>
-            <li>
-                <a href="#GIT_TAG" class="nav-link">GIT TAG</a>
-            </li>
-            <li>
-                <a href="#GIT_REBASE" class="nav-link">GIT REBASE</a>
-            </li>
-            <li>
-                <a href="#OTHER_COMMANDS" class="nav-link">OTHER COMMANDS</a>
-            </li>
-            <li>
-                <a href="#Fork" class="nav-link">Fork</a>
-            </li>
-        </ul>
-    </nav>
+   <div class="container_nav">
+     <nav id="navbar">
+         <header>GIT Commands</header>
+         <ul>
+             <li>
+                 <a href="#Basic_Configuration" class="nav-link">Basic Configuration</a>
+             </li>
+             <li>
+                 <a href="#Starting_repository" class="nav-link">Starting repository</a>
+             </li>
+             <li>
+                 <a href="#GIT_CLONE" class="nav-link">GIT CLONE</a>
+             </li>
+             <li>
+                 <a href="#GIT_ADD" class="nav-link">GIT ADD</a>
+             </li>
+             <li>
+                 <a href="#GIT_COMMIT" class="nav-link">GIT COMMIT</a>
+             </li>
+             <li>
+                 <a href="#GIT_PUSH" class="nav-link">GIT PUSH</a>
+             </li>
+             <li>
+                 <a href="#GIT_LOG" class="nav-link">GIT LOG</a>
+             </li>
+             <li>
+                 <a href="#GIT_DIFF" class="nav-link">GIT DIFF</a>
+             </li>
+             <li>
+                 <a href="#GIT_HEAD" class="nav-link">GIT HEAD</a>
+             </li>
+             <li>
+                 <a href="#GIT_REMOTE" class="nav-link">GIT REMOTE</a>
+             </li>
+             <li>
+                 <a href="#GIT_BRANCH" class="nav-link">GIT BRANCH</a>
+             </li>
+             <li>
+                 <a href="#GIT_TAG" class="nav-link">GIT TAG</a>
+             </li>
+             <li>
+                 <a href="#GIT_REBASE" class="nav-link">GIT REBASE</a>
+             </li>
+             <li>
+                 <a href="#OTHER_COMMANDS" class="nav-link">OTHER COMMANDS</a>
+             </li>
+             <li>
+                 <a href="#Fork" class="nav-link">Fork</a>
+             </li>
+         </ul>
+     </nav>
+   </div>
 
     <!-- main doc -->
-    <main id="main-doc">
-        <section class="main-section" id="Basic_Configuration">
-            <header>Basic Configuration</header>
-            <p>Configure Name that appear in commits</p>
-            <code>git config --global user.name "example"</code>
-            <p>Configure Email</p>
-            <code>git config --global user.email "example@gmail.com"</code>
-            <p>Colored frame for commands</p>
-            <code>git config --global color.ui true</code>
-        </section>
-        <section class="main-section" id="Starting_repository">
-            <header>Starting repository</header>
-            <p>Start GIT in the project folder</p>
-            <code>git init</code>
-            <p>Clone the repository from github or bitbucket</p>
-            <code>git clone url</code>
-            <p>Add all files for the commit</p>
-            <code>git add .</code>
-            <p>We do the first commit</p>
-            <code>git commit -m "Text identifying why the commit was made".</code>
-            <p>Upload to the repository</p>
-            <code>git push origin master</code>
-        </section>
-        <section class="main-section" id="GIT_CLONE">
-            <header>GIT CLONE</header>
-            <p>Clone the repository from github or bitbucket</p>
-            <code>git clone url</code>
-            <p>Clone the github or bitbucket repository ?????</p>
-            <code>git clone <url> git-demo</code>
-        </section>
-        <section class="main-section" id="GIT_ADD">
-            <header>GIT ADD</header>
-            <p>Add all files for the commit</p>
-            <code>git add .</code>
-            <p>Add the file for commit</p>
-            <code>git add archivo</code>
-            <p>We add all the files for the commit, omitting the new ones.</p>
-            <code>git add --all </code>
-            <p>Add all files with the specified extension</p>
-            <code>git add *.txt</code>
-            <p>We add all files within a directory and a specific file extension</p>
-            <code>git add docs/*.txt</code>
-            <p>Add all files into a directory</p>
-            <code>git add docs/</code>
-        </section>
-        <section class="main-section" id="GIT_COMMIT">
-            <header>GIT COMMIT</header>
-            <p>Load the changes made in the HEAD</p>
-            <code>git commit -m "Text identifying why the commit was made".</code>
-            <p>Add and upload changes to the HEAD</p>
-            <code>git commit -a -m "Text that identifies why the commit was made".</code>
-            <p>If there are conflicts, it shows them</p>
-            <code>git commit -a</code>
-            <p>Add to the last commit, this is not shown as a new commit in the logs. You can specify a new message</p>
-            <code>git commit --amend -m "Text that identifies why the commit was made".</code>
-        </section>
-        <section class="main-section" id="GIT_PUSH">
-            <header>GIT PUSH</header>
-            <p>Upload to the repository</p>
-            <code>git push origien branch</code>
-            <p>We upload a tag</p>
-            <code>git push --tags</code>
-        </section>
-        <section class="main-section" id="GIT_LOG">
-            <header>GIT LOG</header>
-            <p>Displays commit logs</p>
-            <code>git log</code>
-            <p>Shows the changes in the commits</p>
-            <code>git log --oneline --stat</code>
-            <p>Show graphs of commits</p>
-            <code>git log --oneline --graph</code>
-        </section>
-        <section class="main-section" id="GIT_DIFF">
-            <header>GIT DIFF</header>
-            <p>Displays changes made to a file</p>
-            <code>git diff <br> git diff --staged</code>
-        </section>
-        <section class="main-section" id="GIT_HEAD">
-            <header>GIT HEAD</header>
-            <p>Pulls a file from the commit</p>
-            <code>git reset HEAD file</code>
-            <p>Returns the last commit that was made and staging changes.</p>
-            <code>git reset --soft HEAD^</code>
-            <p>Returns the last commit and all changes.</p>
-            <code>git reset --hard HEAD^</code>
-            <p>Returns the last 2 commits and all changes.</p>
-            <code>git reset --hard HEAD^^</code>
-            <p>Rollback merge/commit</p>
-            <code>git log <br> git reset --hard commit_sha</code>
-        </section>
-        <section class="main-section" id="GIT_REMOTE">
-            <header>GIT REMOTE</header>
-            <p>Add remote repository</p>
-            <code>git remote add origin url</code>
-            <p>Change remote</p>
-            <code>git remote set-url origin url</code>
-            <p>Remove repository</p>
-            <code>git remote rm name/origin</code>
-            <p>Show list of repositories</p>
-            <code>git remote -v</code>
-            <p>Displays remote branches</p>
-            <code>git remote show origin</code>
-            <p>Clear all deleted branches</p>
-            <code>git remote prune origin</code>
-        </section>
-        <section class="main-section" id="GIT_BRANCH">
-            <header>GIT BRANCH</header>
-            <p>Create a branch</p>
-            <code>git branch nameBranch</code>
-            <p>List the branches</p>
-            <code>git branch</code>
-            <p>Command -d deletes the branch and joins it to the master</p>
-            <code>git branch -d nameBranch</code>
-            <p>Eliminate without asking</p>
-            <code>git branch -D nameBranch</code>
-        </section>
-        <section class="main-section" id="GIT_TAG">
-            <header>GIT TAG</header>
-            <p>Displays a list of all tags</p>
-            <code>git tag</code>
-            <p>Create a new tag</p>
-            <code>git tag -a verison - m "this is version x".</code>
-        </section>
-        <section class="main-section" id="GIT_REBASE">
-            <header>GIT REBASE</header>
-            <p>Rebasing is used when working with branches, this makes the branches catch up with the master without affecting the master 
-                <br> <br> 
-                It joins the current branch with the master, this cannot be seen as a merge.</p>
-            <code>git rebase</code>
-            <p>When a conflict occurs you do not give the following options:
-                <br><br>
-            when we resolve conflicts --continue to continue the rebasing sequence where it was paused</p>
-            <code>git rebase --continue</code>
-            <p>Omit the conflict and go on your way</p>
-            <code>git rebase --skip</code>
-            <p>Returns everything to the beginning of the overrun</p>
-            <code>git reabse --abort</code>
-            <p>To make a rebasing to a specific branch</p>
-            <code>git rebase nameBranch</code>
-        </section>
-        <section class="main-section" id="OTHER_COMMANDS">
-            <header>OTHER COMMANDS</header>
-            <ul>
-                <li>
-                    <p>Lists a current status of the repository with list of modified or added files</p>
-                    <code>git status</code>
-                </li>
-                <li>
-                    <p>Removes a file from the HEAD and sets it to not-worked status</p>
-                    <code>git checkout -- file</code>
-                </li>
-                <li>
-                    <p>Create a branch based on an online one</p>
-                    <code>git checkout -b newlocalbranchname origin/branch-name</code>
-                </li>
-                <li>
-                    <p>Checks for new changes and updates the repository</p>
-                    <code>git pull origin nameBranch</code>
-                </li>
-                <li>
-                    <p>Cambiar de branch</p>
-                    <code>git checkout nameBranch/tagname</code>
-                </li>
-                <li>
-                    <p>Join the current branch with the specified branch</p>
-                    <code>git merge nameBranch</code>
-                </li>
-                <li>
-                    <p>Verifies changes in the online repository with the local repository</p>
-                    <code>git fetch</code>
-                </li>
-                <li>
-                    <p>Delete a file from the repository</p>
-                    <code>git rm archivo</code>
-                </li>
-            </ul>
-        </section>
-        <section class="main-section" id="Fork">
-            <header>Fork</header>
-            <p>Download remote from a fork</p>
-            <code>git remote add upstream url</code>
-            <p>Merge with master of a fork</p>
-            <code>
-                git fetch upstream
-                <br>
-                git merge upstream/master
-            </code>
-        </section>
-    </main>
+    <div class="container_main">
+        <main id="main-doc">
+            <section class="main-section" id="Basic_Configuration">
+                <header>Basic Configuration</header>
+                <article>
+                    <p>Configure Name that appear in commits</p>
+                    <code>git config --global user.name "example"</code>
+                    <p>Configure Email</p>
+                    <code>git config --global user.email "example@gmail.com"</code>
+                    <p>Colored frame for commands</p>
+                    <code>git config --global color.ui true</code>
+                </article>
+            </section>
+            <section class="main-section" id="Starting_repository">
+                <header>Starting repository</header>
+                <article>
+                    <p>Start GIT in the project folder</p>
+                    <code>git init</code>
+                    <p>Clone the repository from github or bitbucket</p>
+                    <code>git clone url</code>
+                    <p>Add all files for the commit</p>
+                    <code>git add .</code>
+                    <p>We do the first commit</p>
+                    <code>git commit -m "Text identifying why the commit was made".</code>
+                    <p>Upload to the repository</p>
+                    <code>git push origin master</code>
+                </article>
+            </section>
+            <section class="main-section" id="GIT_CLONE">
+                <header>GIT CLONE</header>
+                <article>
+                    <p>Clone the repository from github or bitbucket</p>
+                    <code>git clone url</code>
+                    <p>Clone the github or bitbucket repository ?????</p>
+                    <code>git clone <url> git-demo</code>
+                </article>
+            </section>
+            <section class="main-section" id="GIT_ADD">
+                <header>GIT ADD</header>
+                <article>
+                    <p>Add all files for the commit</p>
+                    <code>git add .</code>
+                    <p>Add the file for commit</p>
+                    <code>git add archivo</code>
+                    <p>We add all the files for the commit, omitting the new ones.</p>
+                    <code>git add --all </code>
+                    <p>Add all files with the specified extension</p>
+                    <code>git add *.txt</code>
+                    <p>We add all files within a directory and a specific file extension</p>
+                    <code>git add docs/*.txt</code>
+                    <p>Add all files into a directory</p>
+                    <code>git add docs/</code>
+                </article>
+            </section>
+            <section class="main-section" id="GIT_COMMIT">
+                <header>GIT COMMIT</header>
+                <article>
+                    <p>Load the changes made in the HEAD</p>
+                    <code>git commit -m "Text identifying why the commit was made".</code>
+                    <p>Add and upload changes to the HEAD</p>
+                    <code>git commit -a -m "Text that identifies why the commit was made".</code>
+                    <p>If there are conflicts, it shows them</p>
+                    <code>git commit -a</code>
+                    <p>Add to the last commit, this is not shown as a new commit in the logs. You can specify a new message</p>
+                    <code>git commit --amend -m "Text that identifies why the commit was made".</code>
+                </article>
+            </section>
+            <section class="main-section" id="GIT_PUSH">
+                <header>GIT PUSH</header>
+                <article>
+                    <p>Upload to the repository</p>
+                    <code>git push origien branch</code>
+                    <p>We upload a tag</p>
+                    <code>git push --tags</code>
+                </article>
+            </section>
+            <section class="main-section" id="GIT_LOG">
+                <header>GIT LOG</header>
+                <article>
+                    <p>Displays commit logs</p>
+                    <code>git log</code>
+                    <p>Shows the changes in the commits</p>
+                    <code>git log --oneline --stat</code>
+                    <p>Show graphs of commits</p>
+                    <code>git log --oneline --graph</code>
+                </article>
+            </section>
+            <section class="main-section" id="GIT_DIFF">
+                <header>GIT DIFF</header>
+                <article>
+                    <p>Displays changes made to a file</p>
+                    <code>git diff</code>
+                    <br><br><br>
+                    <code>git diff --staged</code>
+                </article>
+            </section>
+            <section class="main-section" id="GIT_HEAD">
+                <header>GIT HEAD</header>
+                <article>
+                    <p>Pulls a file from the commit</p>
+                    <code>git reset HEAD file</code>
+                    <p>Returns the last commit that was made and staging changes.</p>
+                    <code>git reset --soft HEAD^</code>
+                    <p>Returns the last commit and all changes.</p>
+                    <code>git reset --hard HEAD^</code>
+                    <p>Returns the last 2 commits and all changes.</p>
+                    <code>git reset --hard HEAD^^</code>
+                    <p>Rollback merge/commit</p>
+                    <code>git log</code>
+                    <br><br><br>
+                    <code>git reset --hard commit_sha</code>
+                </article>
+            </section>
+            <section class="main-section" id="GIT_REMOTE">
+                <header>GIT REMOTE</header>
+                <article>
+                    <p>Add remote repository</p>
+                    <code>git remote add origin url</code>
+                    <p>Change remote</p>
+                    <code>git remote set-url origin url</code>
+                    <p>Remove repository</p>
+                    <code>git remote rm name/origin</code>
+                    <p>Show list of repositories</p>
+                    <code>git remote -v</code>
+                    <p>Displays remote branches</p>
+                    <code>git remote show origin</code>
+                    <p>Clear all deleted branches</p>
+                    <code>git remote prune origin</code>
+                </article>
+            </section>
+            <section class="main-section" id="GIT_BRANCH">
+                <header>GIT BRANCH</header>
+                <article>
+                    <p>Create a branch</p>
+                    <code>git branch nameBranch</code>
+                    <p>List the branches</p>
+                    <code>git branch</code>
+                    <p>Command -d deletes the branch and joins it to the master</p>
+                    <code>git branch -d nameBranch</code>
+                    <p>Eliminate without asking</p>
+                    <code>git branch -D nameBranch</code>
+                </article>
+            </section>
+            <section class="main-section" id="GIT_TAG">
+                <header>GIT TAG</header>
+                <article>
+                    <p>Displays a list of all tags</p>
+                    <code>git tag</code>
+                    <p>Create a new tag</p>
+                    <code>git tag -a verison - m "this is version x".</code>
+                </article>
+            </section>
+            <section class="main-section" id="GIT_REBASE">
+                <header>GIT REBASE</header>
+                <article>
+                    <p>Rebasing is used when working with branches, this makes the branches catch up with the master without affecting the master 
+                        <br> <br> 
+                        It joins the current branch with the master, this cannot be seen as a merge.</p>
+                    <code>git rebase</code>
+                    <p>When a conflict occurs you do not give the following options:
+                        <br><br>
+                    when we resolve conflicts --continue to continue the rebasing sequence where it was paused</p>
+                    <code>git rebase --continue</code>
+                    <p>Omit the conflict and go on your way</p>
+                    <code>git rebase --skip</code>
+                    <p>Returns everything to the beginning of the overrun</p>
+                    <code>git reabse --abort</code>
+                    <p>To make a rebasing to a specific branch</p>
+                    <code>git rebase nameBranch</code>
+                </article>
+            </section>
+            <section class="main-section" id="OTHER_COMMANDS">
+                <header>OTHER COMMANDS</header>
+                <article>
+                    <ul>
+                        <li>
+                            <p>Lists a current status of the repository with list of modified or added files</p>
+                            <code>git status</code>
+                        </li>
+                        <li>
+                            <p>Removes a file from the HEAD and sets it to not-worked status</p>
+                            <code>git checkout -- file</code>
+                        </li>
+                        <li>
+                            <p>Create a branch based on an online one</p>
+                            <code>git checkout -b newlocalbranchname origin/branch-name</code>
+                        </li>
+                        <li>
+                            <p>Checks for new changes and updates the repository</p>
+                            <code>git pull origin nameBranch</code>
+                        </li>
+                        <li>
+                            <p>Cambiar de branch</p>
+                            <code>git checkout nameBranch/tagname</code>
+                        </li>
+                        <li>
+                            <p>Join the current branch with the specified branch</p>
+                            <code>git merge nameBranch</code>
+                        </li>
+                        <li>
+                            <p>Verifies changes in the online repository with the local repository</p>
+                            <code>git fetch</code>
+                        </li>
+                        <li>
+                            <p>Delete a file from the repository</p>
+                            <code>git rm archivo</code>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="Fork">
+                <header>Fork</header>
+                <article>
+                    <p>Download remote from a fork</p>
+                    <code>git remote add upstream url</code>
+                    <p>Merge with master of a fork</p>
+                    <code>git fetch upstream</code>
+                    <br><br><br>
+                    <code>git merge upstream/master</code>
+                </article>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
