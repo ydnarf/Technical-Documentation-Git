@@ -13,10 +13,13 @@ header{
     font-weight: 400;
 }
 
+.container_main{
+    display: flex;
+}
+
 /* Navbar */
 
 #navbar{
-    float: left;
     height: 100%;
     position: fixed;
     border-right: 3px solid rgb(145, 145, 145);
@@ -45,7 +48,6 @@ header{
 #main-doc{
     margin-left: 310px;
     padding: 20px;
-    float: right;
 }
 
 #main-doc header{
